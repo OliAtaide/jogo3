@@ -3595,7 +3595,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.System.Acts.CreateObjectByName,
 		C3.Plugins.System.Exps.random,
-		C3.Plugins.System.Acts.SetLayerVisible
+		C3.Plugins.System.Acts.SetLayerVisible,
+		C3.Plugins.Mouse.Cnds.OnWheel,
+		C3.Plugins.Sprite.Cnds.CompareY,
+		C3.Plugins.Sprite.Acts.SetY,
+		C3.Plugins.Sprite.Exps.Y
 	];
 };
 self.C3_JsPropNameTable = [
@@ -3703,6 +3707,8 @@ self.C3_JsPropNameTable = [
 	{regua_logos_lais_ufrn_sedis_ufrn_min_saude_gov_brasil: 0},
 	{Botão: 0},
 	{EntradaDeTexto: 0},
+	{Mapeamento: 0},
+	{Voltar: 0},
 	{Bloco: 0},
 	{Icone: 0}
 ];
@@ -3813,16 +3819,34 @@ self.C3_ExpressionFuncs = [
 		() => 0,
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0(710, 1280);
+			return () => f0(800, 1600);
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => f0(100, 560);
+			return () => f0(280, 1030);
 		},
 		() => "",
 		() => 3,
 		() => 2,
-		() => 4
+		() => 4,
+		() => 640,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 10);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 17);
+		},
+		() => 420,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 10);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() + 17);
+		}
 ];
 
 
