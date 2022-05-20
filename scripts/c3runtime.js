@@ -3709,6 +3709,8 @@ self.C3_JsPropNameTable = [
 	{EntradaDeTexto: 0},
 	{Mapeamento: 0},
 	{Voltar: 0},
+	{Sprite: 0},
+	{Texto6: 0},
 	{Bloco: 0},
 	{Icone: 0}
 ];
@@ -3829,7 +3831,7 @@ self.C3_ExpressionFuncs = [
 		() => 3,
 		() => 2,
 		() => 4,
-		() => 640,
+		() => 720,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() + 10);
@@ -3838,7 +3840,7 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 17);
 		},
-		() => 420,
+		() => 480,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 10);
